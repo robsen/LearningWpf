@@ -1,0 +1,19 @@
+﻿<Window x:Class="ChangeBackgroundColor.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChangeBackgroundColor"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="400">
+    <StackPanel Margin="20">
+        <Label Content="Choose a Color:" />
+        <Button Content="Red" Click="ChangeWindowBackgroundColor" Background="Red" />
+        <Button Content="Green" Click="ChangeWindowBackgroundColor" Background="Green" />
+        <Button Content="Blue" Click="ChangeWindowBackgroundColor" Background="Blue" />
+        <Button Content="Purple" Click="ChangeWindowBackgroundColor" Background="Purple" />
+        <Button Content="Yellow" Click="ChangeWindowBackgroundColor" Background="Yellow" />
+        <Button Content="Transparent" Click="ChangeWindowBackgroundColor" Background="Transparent" />
+        <Button Content="Bug" Click="ChangeWindowBackgroundColor" Background="Black" Foreground="Red" FontWeight="Bold" />
+    </StackPanel>
+</Window>

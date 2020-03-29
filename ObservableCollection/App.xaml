@@ -1,0 +1,30 @@
+﻿<Application
+    x:Class="ObservableCollection.App"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="clr-namespace:ObservableCollection"
+    StartupUri="/Views/Main/MainView.xaml"
+    >
+    <Application.Resources>
+        <SolidColorBrush x:Key="TextColorPrimary" Color="#CCC" />
+        <SolidColorBrush x:Key="ControlBackground" Color="#FF244055" />
+        <SolidColorBrush
+            x:Key="ControlForeground"
+            Opacity="0.8"
+            Color="#CCC"
+            />
+
+        <Style x:Key="BaseControlStyle" TargetType="Control">
+            <Setter Property="Background" Value="{StaticResource ControlBackground}" />
+            <Setter Property="Foreground" Value="{StaticResource ControlForeground}" />
+        </Style>
+        <Style BasedOn="{StaticResource BaseControlStyle}" TargetType="TextBox" />
+        <Style BasedOn="{StaticResource BaseControlStyle}" TargetType="ListBox" />
+
+        <Style TargetType="Label">
+            <Setter Property="Foreground" Value="{StaticResource TextColorPrimary}" />
+            <Setter Property="Padding" Value="0,0,0,0" />
+            <Setter Property="Margin" Value="0" />
+        </Style>
+    </Application.Resources>
+</Application>
