@@ -23,7 +23,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Aufgabe4_1", "Aufgabe4_1\Au
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SwapCursorByTag", "SwapCursorByTag\SwapCursorByTag.csproj", "{547E04C9-DA7B-4652-81CB-8BF93A4C19F6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ControlTemplate", "ControlTemplate\ControlTemplate.csproj", "{915FD90E-12DB-49F9-8873-09AE37CB2576}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ControlTemplate", "ControlTemplate\ControlTemplate.csproj", "{915FD90E-12DB-49F9-8873-09AE37CB2576}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ApplicationClass", "ApplicationClass\ApplicationClass.csproj", "{C0C9691E-587E-4027-A004-A524877A0D41}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -75,6 +77,10 @@ Global
 		{915FD90E-12DB-49F9-8873-09AE37CB2576}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{915FD90E-12DB-49F9-8873-09AE37CB2576}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{915FD90E-12DB-49F9-8873-09AE37CB2576}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C0C9691E-587E-4027-A004-A524877A0D41}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C0C9691E-587E-4027-A004-A524877A0D41}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C0C9691E-587E-4027-A004-A524877A0D41}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C0C9691E-587E-4027-A004-A524877A0D41}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
