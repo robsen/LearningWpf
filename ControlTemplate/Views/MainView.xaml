@@ -11,6 +11,11 @@
     mc:Ignorable="d"
     >
     <StackPanel>
+        <StackPanel.Resources>
+            <Style TargetType="Button">
+                <Setter Property="Template" Value="{StaticResource DefaultButton}" />
+            </Style>
+        </StackPanel.Resources>
         <Button
             Width="240"
             Margin="0,20"
