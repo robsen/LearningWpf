@@ -44,7 +44,9 @@ namespace SimpleTexteditor.Views
 
         private void OnPreviewDragOver(object sender, DragEventArgs e)
         {
-            e.Effects = DragDropEffects.All;
+            e.Effects = IsFileDrop(e)
+                ? DragDropEffects.All
+                : DragDropEffects.None;
             e.Handled = true;
         }
     }
