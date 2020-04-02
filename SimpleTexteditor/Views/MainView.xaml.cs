@@ -58,6 +58,5 @@ namespace SimpleTexteditor.Views
                 MessageBoxOptions.DefaultDesktopOnly
             );
         }
-
     }
 }
