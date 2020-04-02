@@ -22,7 +22,15 @@ namespace SimpleTexteditor.Views
             if (filePaths.Length > 1)
                 ShowMessageBoxFileAmountExceeded();
             else
+            {
                 EditorTextBox.Text = System.IO.File.ReadAllText(filePaths[0]);
+                FocusThisWindow();
+            }
+        }
+
+        private void FocusThisWindow()
+        {
+            Activate();
         }
 
         private static void ShowMessageBoxFileAmountExceeded()
