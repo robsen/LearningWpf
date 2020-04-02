@@ -1,5 +1,4 @@
 ﻿using System.Windows;
-using System.Windows.Threading;
 
 namespace SimpleTexteditor.Views
 {
@@ -13,6 +12,7 @@ namespace SimpleTexteditor.Views
             InitializeComponent();
         }
 
+        #region Events
         private void OnDrop(object sender, DragEventArgs e)
         {
             if (IsFileDrop(e) == false)
@@ -26,6 +26,20 @@ namespace SimpleTexteditor.Views
                 EditorTextBox.Text = System.IO.File.ReadAllText(filePaths[0]);
                 FocusThisWindow();
             }
+        }
+
+        private void OnPreviewDragOver(object sender, DragEventArgs e)
+        {
+            e.Effects = IsFileDrop(e)
+                ? DragDropEffects.All
+                : DragDropEffects.None;
+            e.Handled = true;
+        }
+        #endregion
+
+        private static bool IsFileDrop(DragEventArgs e)
+        {
+            return e.Data.GetDataPresent(DataFormats.FileDrop);
         }
 
         private void FocusThisWindow()
@@ -45,17 +59,5 @@ namespace SimpleTexteditor.Views
             );
         }
 
-        private static bool IsFileDrop(DragEventArgs e)
-        {
-            return e.Data.GetDataPresent(DataFormats.FileDrop);
-        }
-
-        private void OnPreviewDragOver(object sender, DragEventArgs e)
-        {
-            e.Effects = IsFileDrop(e)
-                ? DragDropEffects.All
-                : DragDropEffects.None;
-            e.Handled = true;
-        }
     }
 }
