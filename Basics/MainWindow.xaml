@@ -9,7 +9,8 @@
     Width="400"
     Height="500"
     WindowStartupLocation="CenterScreen"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    >
     <Window.Resources>
         <SolidColorBrush x:Key="ButtonColor" Color="LightGreen" />
     </Window.Resources>
@@ -18,33 +19,12 @@
         <StaticResource ResourceKey="WindowBackground" />
     </Window.Background>
 
-    <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition />
-            <RowDefinition />
-            <RowDefinition />
-        </Grid.RowDefinitions>
-
+    <UniformGrid Columns="2" Rows="4">
         <TextBlock Margin="20" TextTrimming="WordEllipsis">
             Hello,<Run FontWeight="Bold" Text="World" />
             !</TextBlock>
 
-        <ScrollViewer Grid.Row="1" VerticalScrollBarVisibility="Auto">
-            <TextBlock x:Name="LongTextTextBlock" TextWrapping="Wrap">
-                The primary WPF programming model is exposed through managed code. Early in the design phase of WPF there were a number of debates about where the line should be drawn between the managed components of the system and the unmanaged ones. The CLR provides a number of features that make development more productive and robust (including memory management, error handling, common type system, etc.) but they come at a cost.
-            </TextBlock>
-        </ScrollViewer>
-        <StackPanel Grid.Row="2">
-            <Label Content="_Age:" Target="{Binding ElementName=Age}" />
-            <TextBox x:Name="Age" />
-            <Button Click="ShowModalWindow" Content="Show Modal Window" />
-        </StackPanel>
-        <ScrollViewer Grid.Column="1" VerticalScrollBarVisibility="Auto">
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
             <StackPanel>
                 <Label Content="_First Name:" Target="{Binding ElementName=FirstName}" />
                 <TextBox x:Name="FirstName" Background="{DynamicResource ButtonColor}" />
@@ -52,11 +32,14 @@
                 <TextBox x:Name="LastName" Background="{DynamicResource ButtonColor}" />
             </StackPanel>
         </ScrollViewer>
-        <StackPanel
-            Grid.Row="1"
-            Grid.Column="1"
-            Margin="10"
-            VerticalAlignment="Center">
+
+        <ScrollViewer VerticalScrollBarVisibility="Auto">
+            <TextBlock x:Name="LongTextTextBlock" TextWrapping="Wrap">
+                The primary WPF programming model is exposed through managed code. Early in the design phase of WPF there were a number of debates about where the line should be drawn between the managed components of the system and the unmanaged ones. The CLR provides a number of features that make development more productive and robust (including memory management, error handling, common type system, etc.) but they come at a cost.
+            </TextBlock>
+        </ScrollViewer>
+
+        <StackPanel Margin="10" VerticalAlignment="Center">
 
             <RadioButton Content="Guat, geh?" GroupName="rating" />
             <RadioButton Content="Super, geh?" GroupName="rating" />
@@ -65,30 +48,40 @@
                 Background="{StaticResource ButtonColor}"
                 Click="Button_Click"
                 Content="Click Me!"
-                IsEnabled="{Binding ElementName=EnableButtonCheckBox, Path=IsChecked}" />
+                IsEnabled="{Binding ElementName=EnableButtonCheckBox, Path=IsChecked}"
+                />
             <CheckBox
                 x:Name="EnableButtonCheckBox"
                 Content="ThreeState enabled"
                 Foreground="WhiteSmoke"
-                IsThreeState="True" />
+                IsThreeState="True"
+                />
         </StackPanel>
-        <StackPanel Grid.Row="2" Grid.Column="1">
+
+        <StackPanel>
+            <Label Content="_Age:" Target="{Binding ElementName=Age}" />
+            <TextBox x:Name="Age" />
+            <Button Click="ShowModalWindow" Content="Show Modal Window" />
+        </StackPanel>
+
+        <StackPanel>
             <Button Click="ShowWindow1" Content="{StaticResource HalfLife_Logo}" />
         </StackPanel>
+
         <TextBox
-            Grid.Row="3"
             Width="Auto"
             HorizontalAlignment="Stretch"
             AcceptsReturn="True"
             SelectionChanged="TextBox_SelectionChanged"
             Text="{Binding ElementName=LongTextTextBlock, Path=Text, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-            TextWrapping="Wrap" />
+            TextWrapping="Wrap"
+            />
+
         <TextBlock
             x:Name="SelectionChangedTextBlock"
-            Grid.Row="3"
-            Grid.Column="1"
             Foreground="White"
             Text="Select some text from my left TextBox."
-            TextWrapping="Wrap" />
-    </Grid>
+            TextWrapping="Wrap"
+            />
+    </UniformGrid>
 </Window>
