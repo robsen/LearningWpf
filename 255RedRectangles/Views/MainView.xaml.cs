@@ -3,14 +3,14 @@ using System.Windows;
 using System.Windows.Media;
 using System.Windows.Shapes;
 
-namespace _255RedRectangles
+namespace _255RedRectangles.Views
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class MainView : Window
     {
-        public MainWindow()
+        public MainView()
         {
             InitializeComponent();
         }
