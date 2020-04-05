@@ -32,7 +32,18 @@
             Style="{StaticResource ToolBarScrollViewerStyle}"
             VerticalScrollBarVisibility="Auto"
             >
-            <StackPanel x:Name="ToolBar" />
+            <StackPanel x:Name="ToolBar">
+                <Label Content="Brush _Thickness" Target="{Binding ElementName=BrushThicknessSlider}" />
+                <Slider
+                    x:Name="BrushThicknessSlider"
+                    AutoToolTipPlacement="BottomRight"
+                    LargeChange="5"
+                    Maximum="100"
+                    Minimum="1"
+                    TickFrequency="5"
+                    TickPlacement="BottomRight"
+                    />
+            </StackPanel>
         </ScrollViewer>
         <TextBlock
             x:Name="StatusBar"
