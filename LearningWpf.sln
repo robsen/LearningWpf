@@ -35,7 +35,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "255RedRectangles", "255RedR
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DrawingEllipsis", "DrawingEllipsis\DrawingEllipsis.csproj", "{25DC8E89-4294-4FF8-869C-097D28EF07B0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Painter", "Painter\Painter.csproj", "{4E86C862-A5D9-4F91-9F46-AAC75F2E25D0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Painter", "Painter\Painter.csproj", "{4E86C862-A5D9-4F91-9F46-AAC75F2E25D0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SimpleImageViewer", "SimpleImageViewer\SimpleImageViewer.csproj", "{0FCACA20-AEC3-4FD3-8432-BE1E77406C00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -111,6 +113,10 @@ Global
 		{4E86C862-A5D9-4F91-9F46-AAC75F2E25D0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4E86C862-A5D9-4F91-9F46-AAC75F2E25D0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4E86C862-A5D9-4F91-9F46-AAC75F2E25D0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0FCACA20-AEC3-4FD3-8432-BE1E77406C00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0FCACA20-AEC3-4FD3-8432-BE1E77406C00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0FCACA20-AEC3-4FD3-8432-BE1E77406C00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0FCACA20-AEC3-4FD3-8432-BE1E77406C00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
