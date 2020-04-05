@@ -9,7 +9,8 @@
     Width="350"
     Height="300"
     WindowStartupLocation="CenterScreen"
-    mc:Ignorable="d">
+    mc:Ignorable="d"
+    >
     <Window.Resources>
         <Style TargetType="Slider">
             <Setter Property="Minimum" Value="0" />
@@ -20,25 +21,29 @@
             <Setter Property="Foreground" Value="Black" />
             <Setter Property="Margin" Value="0,10" />
             <Setter Property="Value" Value="255" />
+            <Setter Property="AutoToolTipPlacement" Value="TopLeft" />
         </Style>
     </Window.Resources>
     <StackPanel Margin="20">
         <Label
             Content="{Binding ElementName=RedSlider, Path=Value}"
             ContentStringFormat="Red: {0:F0}"
-            Target="{Binding ElementName=RedSlider}" />
+            Target="{Binding ElementName=RedSlider}"
+            />
         <Slider x:Name="RedSlider" ValueChanged="RedSlider_ValueChanged" />
 
         <Label
             Content="{Binding ElementName=GreenSlider, Path=Value}"
             ContentStringFormat="Green: {0:F0}"
-            Target="{Binding ElementName=GreenSlider}" />
+            Target="{Binding ElementName=GreenSlider}"
+            />
         <Slider x:Name="GreenSlider" ValueChanged="GreenSlider_ValueChanged" />
 
         <Label
             Content="{Binding ElementName=BlueSlider, Path=Value}"
             ContentStringFormat="Blue: {0:F0}"
-            Target="{Binding ElementName=BlueSlider}" />
+            Target="{Binding ElementName=BlueSlider}"
+            />
         <Slider x:Name="BlueSlider" ValueChanged="BlueSlider_ValueChanged" />
     </StackPanel>
 </Window>
