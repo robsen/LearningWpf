@@ -4,6 +4,7 @@
     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:sys="clr-namespace:System;assembly=mscorlib"
     Title="Painter"
     Width="800"
     Height="600"
@@ -47,6 +48,15 @@
                     TickFrequency="5"
                     TickPlacement="BottomRight"
                     />
+                <Label Content="Line _Shape" Target="{Binding ElementName=LineShapeComboBox}" />
+                <ComboBox x:Name="LineShapeComboBox" />
+                <Label Content="Brush _Form" Target="{Binding ElementName=BrushFormComboBox}" />
+                <ComboBox x:Name="BrushFormComboBox" SelectedIndex="0">
+                    <ComboBox.Items>
+                        <sys:String>Circle</sys:String>
+                        <sys:String>Rectangle</sys:String>
+                    </ComboBox.Items>
+                </ComboBox>
             </StackPanel>
         </ScrollViewer>
         <TextBlock
