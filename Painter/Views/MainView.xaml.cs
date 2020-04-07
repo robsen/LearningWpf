@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
@@ -23,6 +24,10 @@ namespace Painter.Views
         public MainView()
         {
             InitializeComponent();
+
+            PropertyInfo[] propertyInfosColor = typeof(Colors).GetProperties();
+            ColorsListBox.ItemsSource = propertyInfosColor;
+            ColorsListBox.SelectedIndex = 0;
         }
     }
 }

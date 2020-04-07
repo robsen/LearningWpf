@@ -38,6 +38,28 @@
             VerticalScrollBarVisibility="Auto"
             >
             <StackPanel x:Name="ToolBar">
+                <ListBox
+                    x:Name="ColorsListBox"
+                    Height="200"
+                    ScrollViewer.HorizontalScrollBarVisibility="Disabled"
+                    ScrollViewer.VerticalScrollBarVisibility="Auto"
+                    >
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <Rectangle
+                                Width="25"
+                                Height="25"
+                                Fill="{Binding Name}"
+                                ToolTip="{Binding Name}"
+                                />
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                    <ListBox.ItemsPanel>
+                        <ItemsPanelTemplate>
+                            <WrapPanel />
+                        </ItemsPanelTemplate>
+                    </ListBox.ItemsPanel>
+                </ListBox>
                 <Label Content="Brush _Thickness" Target="{Binding ElementName=BrushThicknessSlider}" />
                 <Slider
                     x:Name="BrushThicknessSlider"
