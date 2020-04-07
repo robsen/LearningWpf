@@ -21,7 +21,11 @@
             <ColumnDefinition Width="10" />
             <ColumnDefinition />
         </Grid.ColumnDefinitions>
-        <Canvas x:Name="DrawingArea" Cursor="Pen" />
+        <TabControl Margin="10,10,0,0">
+            <TabItem Header="Page1">
+                <Canvas x:Name="DrawingArea" Cursor="Pen" />
+            </TabItem>
+        </TabControl>
         <GridSplitter
             Grid.Column="1"
             Width="10"
