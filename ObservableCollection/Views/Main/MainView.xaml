@@ -8,7 +8,8 @@
     Title="MainWindow"
     Width="500"
     Height="400"
-    Background="#FF2E2E2E"
+    Background="{StaticResource WindowBackground}"
+    WindowStartupLocation="CenterScreen"
     mc:Ignorable="d"
     >
     <Window.DataContext>
@@ -40,7 +41,7 @@
 
         <Label Content="Persons" />
         <ListBox
-            MaxHeight="150"
+            MaxHeight="120"
             ItemTemplate="{StaticResource PersonsListBoxDataTemplate}"
             ItemsSource="{Binding Persons, Mode=OneWay}"
             >
@@ -51,5 +52,10 @@
                 <SolidColorBrush Color="#FF244055" />
             </ListBox.Background>
         </ListBox>
+        <Button
+            Margin="0,12,0,0"
+            Click="CreatePerson"
+            Content="_Create new Person"
+            />
     </StackPanel>
 </Window>

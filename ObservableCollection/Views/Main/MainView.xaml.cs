@@ -31,5 +31,18 @@ namespace ObservableCollection.Views.Main
             FirstNameTextBox.Text = string.Empty;
             LastNameTextBox.Text = string.Empty;
         }
+
+        private void CreatePerson(object sender, RoutedEventArgs e)
+        {
+            var personWindow = new Window()
+            {
+                Content = new PersonView(),
+                Width = 400,
+                Height = 250,
+                WindowStartupLocation = WindowStartupLocation.CenterScreen,
+                DataContext = this.DataContext
+            };
+            personWindow.Show();
+        }
     }
 }
